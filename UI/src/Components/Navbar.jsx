@@ -32,7 +32,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link to={"/"} className="navbar-brand" href="#">
-          SCHOOL NAME
+          Brand Name & Logo
         </Link>
         <button
           className="navbar-toggler"
@@ -64,22 +64,22 @@ const Navbar = () => {
               </li>
             )}
             <li className="nav-item">
-              <Link
-                to={isLogin ? "/about" : "/login"}
-                className="nav-link"
-                href="#"
-              >
-                About
+              <Link to={"/about"} className="nav-link" href="#">
+                About Us
               </Link>
             </li>
 
-            {userData?.designation === "Admin" && (
-              <li className="nav-item">
-                <Link to={"/signup"} className="nav-link" href="#">
-                  Register
-                </Link>
-              </li>
-            )}
+            <li className="nav-item">
+              <Link to={"/about"} className="nav-link" href="#">
+                Contact Us
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to={"/signup"} className="nav-link" href="#">
+                Sign Up
+              </Link>
+            </li>
 
             {isLogin && (
               <li className="nav-item">
